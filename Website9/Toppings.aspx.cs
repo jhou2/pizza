@@ -1,6 +1,7 @@
 ﻿using MarysEntities;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,14 +13,19 @@ public partial class Toppings : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        //if (!IsPostBack)
-        //    BindToppings();
+       // if (!IsPostBack)
+            //BindToppings();
+
+        
     }
 
     private void BindToppings()
     {
         //var ctx = new MaryPizzaEntities();
         //gvToppings.DataSource = ctx.Toppings;
+        //gvToppings.DataSource = Session["ToppingTable"];
+        gvToppings.DataBind();
+
         
     }
 
@@ -44,16 +50,16 @@ public partial class Toppings : System.Web.UI.Page
         
         gvToppings.EditIndex = e.NewEditIndex;
 
-        gvToppings.DataSource = ctx.Toppings;
+        //gvToppings.DataSource = ctx.Toppings;
         gvToppings.DataBind();
     }
 
     protected void gvToppings_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
     {
-        var ctx = new MaryPizzaEntities();
+        //var ctx = new MaryPizzaEntities();
         gvToppings.EditIndex = -1;
 
-        gvToppings.DataSource = ctx.Toppings;
+        //gvToppings.DataSource = ctx.Toppings;
         gvToppings.DataBind();
         
     }
@@ -71,8 +77,9 @@ public partial class Toppings : System.Web.UI.Page
         //entityModel.SaveChanges();
         var ctx = new MaryPizzaEntities();
 
+        //var selectedTopping = ctx.Toppings.Where(i=>i.toppingId ==e.)
         gvToppings.EditIndex = -1;
-        gvToppings.DataSource = ctx.Toppings;
+        //gvToppings.DataSource = ctx.Toppings;
         gvToppings.DataBind();
     }
 

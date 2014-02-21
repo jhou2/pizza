@@ -11,12 +11,12 @@
         DataSourceID="MarysPizzaDatasource" AllowSorting="True" 
         OnSelectedIndexChanged="GridView1_SelectedIndexChanged" 
         onrowcancelingedit="gvToppings_RowCancelingEdit" 
-        onrowediting="gvToppings_RowEditing" onrowupdating="gvToppings_RowUpdating"
-        AllowPaging="True" 
+        onrowediting="gvToppings_RowEditing" onRowUpdating="gvToppings_RowUpdating"
+        AllowPaging="True"
         BorderStyle="None" GridLines="None">
         
         <Columns>
-            <asp:CommandField ShowEditButton="True" ButtonType="button" />
+            <asp:CommandField CausesValidation="false" ShowEditButton="True" ButtonType="button" />
             <asp:BoundField DataField="toppingId" HeaderText="toppingId" ReadOnly="True" SortExpression="toppingId" />
             <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
             <asp:BoundField DataField="active" HeaderText="active" SortExpression="active" />
