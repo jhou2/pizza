@@ -12,7 +12,7 @@
         <script src="~/js/jquery/jquery.min.js"></script>
         <script src="~/js/jquery/jquery.widget.min.js"></script>
         <script src="~/js/metro/metro.min.js"></script>
-   
+        <script src="~/js/bootstrap.min.js"></script>
     <style type="text/css">
         a.selected.static
         {
@@ -38,25 +38,25 @@
             </header>
         </div>
               
-            <nav class="horizontal-menu bg-white grid">
-                <br />
-                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
-                <ul class="row">
-                        <li class="span10">
-                            <asp:Menu ID="Menu1" Orientation="Horizontal" runat="server" DynamicHorizontalOffset="1" DataSourceID="SiteMapDataSource1">
+        <nav class="horizontal-menu bg-white grid container">
+            <br />
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+            <ul class="row">
+                <li class="span10 col-lg-8">
+                    <asp:Menu ID="Menu1" Orientation="Horizontal" runat="server" DynamicHorizontalOffset="1" DataSourceID="SiteMapDataSource1">
                             
-                            </asp:Menu>
-                        </li>
-                    <li class="span2">
-                    <div class="button bg-white" style="float:right; text-align:center;">
-                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
-                    </div>
+                    </asp:Menu>
+                </li>
+                <li class="span2 col-lg-4">
+                <div class="button bg-white" style="float:right; text-align:center;">
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                </div>
 
-                    </li>
-                </ul>
+                </li>
+            </ul>
             
             
-            </nav>
+        </nav>
        <div class="page-region">
            <div class="page-region-content">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
