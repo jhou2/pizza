@@ -6,3 +6,9 @@ jhou28@my.bcit.ca
 Richard Yu Chi Shen
 A00833441
 yuchi_shen@hotmail.com
+
+====================================
+deployed URL:pizza.josephhou.com
+Visual Studio Version: 2013
+.NET frameword :4.0
+databasetype: VS server explorer
