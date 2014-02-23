@@ -77,7 +77,6 @@ public partial class Toppings : System.Web.UI.Page
         //entityModel.SaveChanges();
         var ctx = new MaryPizzaEntities();
 
-        //var selectedTopping = ctx.Toppings.Where(i=>i.toppingId ==e.)
         gvToppings.EditIndex = -1;
         //gvToppings.DataSource = ctx.Toppings;
         gvToppings.DataBind();
