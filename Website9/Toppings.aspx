@@ -35,26 +35,24 @@
 <asp:EntityDataSource ID="MarysPizzaDatasource" runat="server" ConnectionString="name=MaryPizzaEntities" DefaultContainerName="MaryPizzaEntities" EnableFlattening="False" EnableInsert="True" EnableUpdate="True" EntitySetName="Toppings" EntityTypeFilter="Topping" EnableDelete="True">
 </asp:EntityDataSource>
     <h1>Add new topping</h1>
-    <table class="table">
-        <tr>
-            <td>
+    <table class="table container">
+        <tr class="row">
+            <td class="col-md-4">
                 <asp:Label ID="lblToppingName" runat="server" Text="Topping Name"></asp:Label>
             </td>
-            <td>
+            <td class="col-md-4">
                 <asp:TextBox ID="tbToppingName" runat="server"> </asp:TextBox>
             </td>
-            <td>
+            <td class="col-md-4">
                 <asp:RequiredFieldValidator ControlToValidate="tbToppingName" ID="fvToppingName" runat="server" ErrorMessage="Topping name required"></asp:RequiredFieldValidator>
             </td>
         </tr>
-        <tr>
-            <td>
+        <tr class="row">
+            <td class="col-md-4">
                 <asp:CheckBox ID="cbActive" runat="server" Text="Active" />
             </td>
-            <td>
-
-            </td>
-            <td>
+            
+            <td class="col-md-4">
                 <asp:Button ID="btnAddTopping" runat="server" Text="Add" UseSubmitBehavior="True" OnClick="btnAddTopping_Click" CssClass="default" />
             </td>
         </tr>

@@ -9,12 +9,16 @@
     <table class="table">
         <tr>
             <td>
+                <div class="container">
+                    <div class="row">
+                <div class="col-md-5">
                 <header>From</header>
                 <asp:Calendar ID="cdrStart" runat="server"></asp:Calendar>
-            </td>
-            <td style="width:50%;">
+                </div>
+                <div class="col-md-5">
                 <header>To</header>
                 <asp:Calendar ID="cdrEnd" runat="server"></asp:Calendar>
+                    </div></div></div>
             </td>
         </tr>
         <tr>
