@@ -16,14 +16,14 @@
         BorderStyle="None" GridLines="None">
         
         <Columns>
-            <asp:CommandField CausesValidation="false" ShowEditButton="True" ButtonType="button" ShowDeleteButton="True" />
+            <asp:CommandField CausesValidation="false" ShowEditButton="True" ButtonType="button" />
             <asp:BoundField DataField="toppingId" HeaderText="toppingId" ReadOnly="True" SortExpression="toppingId" />
             <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
             <asp:BoundField DataField="active" HeaderText="active" SortExpression="active" />
 
-            <asp:TemplateField >
+            <asp:TemplateField ShowHeader="False">
                 <ItemTemplate>
-                    <!--<asp:Button ID="btnDelete" runat="server" Text="Delete" CommandName="Delete" OnClientClick="return confirm('Delete this Item?');"/> -->
+                    <asp:Button ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Delete" Text="Delete" OnClientClick="return confirm('Delete this Item?');"></asp:Button>
                 </ItemTemplate>
             </asp:TemplateField>
 
