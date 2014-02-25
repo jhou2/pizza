@@ -70,7 +70,7 @@
             </td>
         </tr>
     </table>
-    
+    <asp:Button ID="btnSave" runat="server" OnClick="btnSave_Click" Text="Save This Page" />
 
 
 </asp:Content>
