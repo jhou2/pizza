@@ -27,19 +27,19 @@ public partial class OrderConfirm : System.Web.UI.Page
         string orderDetails3 = "Phone: " + (string)Session["Phone"] + "\n";
         string orderDetails4 = "Size: " + (string)Session["Size"] + " Quantity: " + (string)Session["NoOfPizza"] + "Delivery: " + (string)Session["Delivery"] + "\n" ;
         string orderDetails5 = "Toppings: " + (string)Session["Toppings"];
-        orderDetails5.Replace("</br>", " ");
-        
+        orderDetails5 = orderDetails5.Replace("</br>", " ");
+        List<string> orderDetails = new List<string>();
+        orderDetails.Add(orderDetails1);
+        orderDetails.Add(orderDetails2);
+        orderDetails.Add(orderDetails3);
+        orderDetails.Add(orderDetails4);
+        orderDetails.Add(orderDetails5);
+        orderDetails.Add("=====================================================================================");
+
         if (((string)Session["FirstName"])!=null)
         {
             string path = Server.MapPath(@"~/docs/orders.txt");
-            System.IO.StreamWriter file = new System.IO.StreamWriter(path);
-            file.WriteLine(orderDetails1);
-            file.WriteLine(orderDetails2);
-            file.WriteLine(orderDetails3);
-            file.WriteLine(orderDetails4);
-            file.WriteLine(orderDetails5);
-
-            file.Close();
+            System.IO.File.AppendAllLines(path, orderDetails);
         }
   
     }
